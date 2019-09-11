@@ -14,5 +14,7 @@ steps:
       name: slack-token
     channel: "#bmprivate"
     message: "Hello World :hooray:"
+  input:
+    - echo "APIToken $apitoken"
   dependsOn:
   - init-workflow
