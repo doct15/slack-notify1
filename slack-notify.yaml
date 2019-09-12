@@ -13,6 +13,6 @@ steps:
       $type: Secret
       name: slack-token
     channel: "#bmprivate"
-    message: "Hello World1 :hooray:"
+    message: "Hello World2 :hooray:"
   dependsOn:
   - init-workflow
