@@ -1,6 +1,9 @@
 version: v1
 description: Nebula Slack Notify 
 
+parameters:
+  message:
+    description: Slack message
 steps:
 - name: init-workflow
   image: alpine:latest
@@ -9,10 +12,6 @@ steps:
 - name: slack-notify
   image: gcr.io/nebula-tasks/nebula-slack-notification:57d9f2b
   spec:
-    inputs:
-      params:
-        - name: message
-          default: "Hello World3 :hooray:"
     apitoken:
       $type: Secret
       name: slack-token
