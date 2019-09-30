@@ -4,7 +4,6 @@ description: Nebula Slack Notify
 parameters:
   message:
     description: Slack message
-    'default: Hello World 3! :hooray:'
 steps:
 - name: init-workflow
   image: alpine:latest
