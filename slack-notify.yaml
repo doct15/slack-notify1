@@ -9,10 +9,14 @@ steps:
 - name: slack-notify
   image: gcr.io/nebula-tasks/nebula-slack-notification:57d9f2b
   spec:
+    inputs:
+      params:
+        - name: message
+          default: "Hello World3 :hooray:"
     apitoken:
       $type: Secret
       name: slack-token
     channel: "#bmprivate"
-    message: "Hello World2 :hooray:"
+    #message: "Hello World2 :hooray:"
   dependsOn:
   - init-workflow
